@@ -1,55 +1,50 @@
-# Section 0 — Mathematical Foundations  
+# Section 1: Mechanics I
+
 ## 1. Projectile Motion (Step-by-Step Solution)
 
-**The Problem:** A projectile is fired from the ground with an initial velocity of $v_0 = 100 \text{ m/s}$ at an angle of $\theta = 37^\circ$ above the horizontal. Assume no air resistance.
-
-**Constants & Given Values:**
-* $v_0 = 100 \text{ m/s}$
-* $\theta = 37^\circ$
-* $\sin(37^\circ) \approx 0.6$
-* $\cos(37^\circ) \approx 0.8$
-* $g \approx 10 \text{ m/s}^2$ (acceleration due to gravity)
+**The Problem:**
+A projectile is fired from the ground with an initial velocity of $v_0 = 100 \text{ m/s}$ at an angle of $37^\circ$ above the horizontal. Assume no air resistance.
 
 ---
 
-## 1. Differential Equations of Motion
-The motion is governed by gravity acting only in the vertical direction.
+### A. Differential Equations of Motion
+The motion is analyzed by separating it into horizontal ($x$) and vertical ($y$) components:
 
-* **Horizontal ($x$):** No acceleration.  
+* **Horizontal Direction ($x$):** There is no horizontal force acting on the projectile, so acceleration is zero.
   $$\frac{d^2x}{dt^2} = 0$$
-* **Vertical ($y$):** Constant acceleration downward.  
+* **Vertical Direction ($y$):** Gravity is the only force, providing a constant downward acceleration ($g \approx 10 \text{ m/s}^2$).
   $$\frac{d^2y}{dt^2} = -g$$
 
 ---
 
-## 2. Velocity Components
-Initial velocity is decomposed into $x$ and $y$ vectors:
-* $v_{0x} = v_0 \cos(37^\circ) = 100 \cdot 0.8 = 80 \text{ m/s}$
-* $v_{0y} = v_0 \sin(37^\circ) = 100 \cdot 0.6 = 60 \text{ m/s}$
+### B. Determine the Time of Flight
+To find the total time ($t_{\text{flight}}$), we first find the initial vertical velocity:
+$$v_{0y} = v_0 \sin(37^\circ) = 100 \cdot 0.6 = 60 \text{ m/s}$$
+
+The projectile returns to the ground when vertical displacement $y = 0$:
+$$y(t) = v_{0y}t - \frac{1}{2}gt^2$$
+$$0 = 60t - 5t^2 \implies 5t^2 = 60t$$
+$$t_{\text{flight}} = 12 \text{ s}$$
+
+**Answer:** 12 seconds
 
 ---
 
-## 3. Time of Flight ($t_{flight}$)
-The projectile stays in the air until the vertical displacement $y$ returns to zero.
-Using $y(t) = v_{0y}t - \frac{1}{2}gt^2$:
-$$0 = 60t - 5t^2 \implies 5t^2 = 60t \implies t = 12 \text{ s}$$
+### C. Determine the Maximum Height
+Maximum height ($H_{\text{max}}$) is reached when vertical velocity $v_y = 0$, which occurs at exactly half of the flight time ($t = 6 \text{ s}$):
+$$H = v_{0y}t - \frac{1}{2}gt^2$$
+$$H = 60(6) - 5(6^2) = 360 - 180$$
+$$H_{\text{max}} = 180 \text{ m}$$
 
-**Answer:** $t_{flight} = 12 \text{ seconds}$
-
----
-
-## 4. Maximum Height ($H_{max}$)
-Maximum height occurs when the vertical velocity $v_y = 0$, which is at half the time of flight ($t = 6 \text{ s}$).
-$$H = v_{0y}t - \frac{1}{2}gt^2 = 60(6) - 5(6^2)$$
-$$H = 360 - 180 = 180 \text{ m}$$
-
-**Answer:** $H_{max} = 180 \text{ meters}$
+**Answer:** 180 meters
 
 ---
 
-## 5. Range ($R$)
-The range is the horizontal distance traveled during the total time of flight.
-$$R = v_{0x} \cdot t_{flight}$$
+### D. Determine the Range
+The horizontal range ($R$) is the distance traveled during the total time of flight:
+* Initial horizontal velocity: $v_{0x} = v_0 \cos(37^\circ) = 100 \cdot 0.8 = 80 \text{ m/s}$
+
+$$R = v_{0x} \cdot t_{\text{flight}}$$
 $$R = 80 \cdot 12 = 960 \text{ m}$$
 
-**Answer:** Range = 960 meters
+**Answer:** 960 meters
